@@ -51,9 +51,26 @@ function matchCaseOfLeft(left, right)
 
 function handleText(value) {
   var mappings = [
+    // Substitutions #1 (https://xkcd.com/1288)
+    [ "witnesses",             function() { return ["these"," ","dudes"," ","I"," ","know"] }],
+    [ "allegedly",             function() { return ["kinda"," ","probably"] }],
+    [ "new study",             function() { return ["Tumblr"," ","post"] }],
+    [ "rebuild",               function() { return ["avenge"] }],
+    [ "space",                 function() { return ["spaaace"] }],
+    [ "Google Glass",          function() { return ["Virtual"," ","Boy"] }],
+    [ "smartphone",            function() { return ["Pokédex"] }],
+    [ "electric",              function() { return ["atomic"] }],
+    [ "Senator",               function() { return ["Elf-Lord"] }],
+    [ "car",                   function() { return ["cat"] }],
+    [ "election",              function() { return ["eating"," ","contest"] }],
+    [ "congressional leaders", function() { return ["river"," ","spirits"] }],
+    [ "Homeland Security",     function() { return ["Homestar"," ","Runner"] }],
+    [ "could not be reached for comment", function() { return ["is"," ","guilty"," ","and"," ","everyone"," ","knows"," ","it"] }],
+
+    // Substitutions #2 (https://xkcd.com/1625)
     [ "debate",             function()  { return ["dance","-","off"] }],
     [ "self([- ])driving",  function(d) { return ["uncontrollably",d,"swerving"] }],
-    [ "poll(ing)?",               function()  { return ["psychic"," ","reading"] }],
+    [ "poll(ing)?",         function()  { return ["psychic"," ","reading"] }],
     [ "candidate",          function()  { return ["airbender"] }],
     [ "drone",              function()  { return ["dog"] }],
     [ "vows to",            function()  { return ["probably"," ","won't"] }],
